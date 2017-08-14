@@ -1,0 +1,9 @@
+<header>
+    <img [src]=logo>
+    <h1>{{title}}</h1>
+</header>
+<main>
+    <h1 *ngIf="!todos.length">Sorry, but you haven't todo</h1>
+    <todo-form (add)="createToDo($event)"></todo-form>
+    <todo-list [todos]="todos"></todo-list>
+</main>
