@@ -9,12 +9,9 @@ import {Component, Output, EventEmitter} from '@angular/core';
 
 export class TodoFormComponent {
     title: string = '';
+    @Output() createTodo: EventEmitter<string> = new EventEmitter();
 
-    @Output() add = new EventEmitter();
-
-    onSubmitTodo(event:any) {
-        // event.stopPropagation();
-        // todoForm.reset();
-        this.add.emit(this.title)
+    onSubmitTodo() {
+        this.createTodo.emit(this.title);
     }
 }

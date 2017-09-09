@@ -1,6 +1,6 @@
 import {Component, Input, Output, EventEmitter} from "@angular/core";
 
-import {Todo} from "../shared/todo";
+import {Todo} from "../../shared/todo";
 
 @Component({
     moduleId: module.id,
@@ -12,8 +12,9 @@ import {Todo} from "../shared/todo";
 export class TodoItemComponent {
     @Input() todo: Todo;
     @Output() deleteTodo = new EventEmitter();
-    toggleTodo() {
-        this.todo.completed = !this.todo.completed;
+    @Output() toggleTodo = new EventEmitter();
+    onToggleTodo() {
+        this.toggleTodo.emit(this.todo);
     }
     onDeleteTodo() {
         this.deleteTodo.emit(this.todo);

@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var todo_1 = require("../shared/todo");
+var todo_1 = require("../../shared/todo");
 var TodoItemComponent = (function () {
     function TodoItemComponent() {
         this.deleteTodo = new core_1.EventEmitter();
